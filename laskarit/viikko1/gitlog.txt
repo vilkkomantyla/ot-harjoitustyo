@@ -1,0 +1,866 @@
+Last login: Thu Mar 16 13:09:28 on ttys003
+vilkkomantyla@Ville-Veikko-MacBook-Pro ~ % ssh 
+villevem@melkki.cs.helsinki.fi
+villevem@melkki.cs.helsinki.fi's password: 
+Welcome to Cubbli/Ubuntu 20.04.5 LTS (GNU/Linux 5.15.0-48-generic x86_64)
+
+ * Ubuntu Documentation:  https://help.ubuntu.com
+ * Cubbli Linux:          
+https://wiki.helsinki.fi/display/it4sci/Cubbli+Linux
+ * Support:               helpdesk@helsinki.fi
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+98 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+*** System restart required ***
+ * This is melkki.cs.helsinki.fi.
+ * This is an interactive linux server for all University of Helsinki 
+users. 
+ * Please, do not run any CPU or memory intensive jobs here!
+ * Sometimes security reasons demand that melkki is rebooted on a short
+ * notice.
+
+ * All local writable directories will be cleaned of unused files.
+ * Do not save anything to local tmp directories.
+ * AD and CS home and group directories are safe places for files.
+
+ * 2022-08-27: Melkki was restarted to fix shared directories hanging.
+Last login: Thu Mar 16 13:15:18 2023 from 128.214.138.176
+ * Your home is set to AD lxhome: /home/ad/lxhome/v/villevem/Linux/
+ * Your Z-drive path is: /home/ad/home/v/villevem
+ * ~/Desktop/ , ~/Downloads/ and ~/Documents/ are symlinks to Z-drive.
+villevem@melkki:~$ ls
+Desktop    Downloads  Music     Public     Videos
+Documents  kurssit    Pictures  Templates
+villevem@melkki:~$ mkdir temp
+villevem@melkki:~$ cd temp/
+villevem@melkki:~/temp$ wget 
+https://raw.githubusercontent.com/ohjelmistotekniikka-hy/ohjelmistotekniikka-hy.github.io/master/materiaali/python/unicafe.zip
+--2023-03-16 13:22:26--  
+https://raw.githubusercontent.com/ohjelmistotekniikka-hy/ohjelmistotekniikka-hy.github.io/master/materiaali/python/unicafe.zip
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 
+185.199.109.133, 185.199.111.133, 185.199.108.133, ...
+Connecting to raw.githubusercontent.com 
+(raw.githubusercontent.com)|185.199.109.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 7653 (7.5K) [application/zip]
+Saving to: ‘unicafe.zip’
+
+unicafe.zip         100%[===================>]   7.47K  --.-KB/s    in 0s      
+
+2023-03-16 13:22:26 (70.8 MB/s) - ‘unicafe.zip’ saved [7653/7653]
+
+villevem@melkki:~/temp$ unzip unicafe.zip 
+Archive:  unicafe.zip
+   creating: unicafe/
+  inflating: unicafe/pyproject.toml  
+  inflating: unicafe/.coveragerc     
+  inflating: unicafe/poetry.lock     
+   creating: unicafe/src/
+  inflating: unicafe/src/index.py    
+  inflating: unicafe/src/kassapaate.py  
+  inflating: unicafe/src/maksukortti.py  
+   creating: unicafe/src/tests/
+  inflating: unicafe/src/tests/maksukortti_test.py  
+  inflating: unicafe/src/tests/__init__.py  
+villevem@melkki:~/temp$ ls
+unicafe  unicafe.zip
+villevem@melkki:~/temp$ mv unicafe ~/kurssit/ot2023/viikko1/
+villevem@melkki:~/temp$ rm unicafe.zip 
+villevem@melkki:~/temp$ cd ..
+villevem@melkki:~$ rm temp/
+rm: cannot remove 'temp/': Is a directory
+villevem@melkki:~$ rm -r temp/
+villevem@melkki:~$ cd kurssit/
+villevem@melkki:~/kurssit$ 
+villevem@melkki:~/kurssit$ cd
+cd                 cd-fix-profile     cdloop             cdrecord
+cdadd              cdi                cdo                cdreset
+cdclose            cd-iccdump         cdown              cdshuffle
+cd-create-profile  cdinfo             cdparanoia         cdstop
+cdctrl             cdir               cdpause            cdtool2cddb
+cdecl              cd-it8             cdplay             cdvolume
+villevem@melkki:~$ exit
+logout
+Connection to melkki.cs.helsinki.fi closed.
+vilkkomantyla@Ville-Veikko-MacBook-Pro ~ % git --version
+git version 2.37.1 (Apple Git-137.1)
+vilkkomantyla@Ville-Veikko-MacBook-Pro ~ % git config --global user.name 
+"Ville-Veikko Mäntylä"
+vilkkomantyla@Ville-Veikko-MacBook-Pro ~ % git config --global user.email 
+villevem@helsinki.fi
+vilkkomantyla@Ville-Veikko-MacBook-Pro ~ % git config -l
+credential.helper=osxkeychain
+init.defaultbranch=main
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+user.name=Ville-Veikko Mäntylä
+user.email=villevem@helsinki.fi
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+remote.origin.url=git@github.com:vilkkomantyla/Uus-yritys.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+vilkkomantyla@Ville-Veikko-MacBook-Pro ~ % git config --global color.ui
+vilkkomantyla@Ville-Veikko-MacBook-Pro ~ % git config --global core.editor 
+nano
+vilkkomantyla@Ville-Veikko-MacBook-Pro ~ % git config --global 
+push.default matching
+vilkkomantyla@Ville-Veikko-MacBook-Pro ~ % mkdir ot_viikko1
+vilkkomantyla@Ville-Veikko-MacBook-Pro ~ % cd ot_viikko1
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % ls
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git init
+Initialized empty Git repository in /Users/vilkkomantyla/ot_viikko1/.git/
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % ls -la
+total 0
+drwxr-xr-x   3 vilkkomantyla  staff    96 16 Maa 13:38 .
+drwxr-x---+ 47 vilkkomantyla  staff  1504 16 Maa 13:38 ..
+drwxr-xr-x   9 vilkkomantyla  staff   288 16 Maa 13:38 .git
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % touch tiedosto.txt
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	tiedosto.txt
+
+nothing added to commit but untracked files present (use "git add" to 
+track)
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git add tiedosto.txt 
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   tiedosto.txt
+
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git commit -m 
+"tiedosto.txt luotu"
+[main (root-commit) e4e52f4] tiedosto.txt luotu
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 tiedosto.txt
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git status
+On branch main
+nothing to commit, working tree clean
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % nano tiedosto.txt 
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % touch toinen.txt
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   tiedosto.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	toinen.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git add .
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   tiedosto.txt
+	new file:   toinen.txt
+
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git commit -m "muutos 
+ja lisäys"
+[main 3cd9596] muutos ja lisäys
+ 2 files changed, 1 insertion(+)
+ create mode 100644 toinen.txt
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git statu
+git: 'statu' is not a git command. See 'git --help'.
+
+The most similar commands are
+	status
+	stage
+	stash
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git status
+On branch main
+nothing to commit, working tree clean
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git log
+commit 3cd9596f65cb1d2b01e09ae3c9176ae47fcc6041 (HEAD -> main)
+Author: Ville-Veikko Mäntylä <villevem@helsinki.fi>
+Date:   Thu Mar 16 13:44:05 2023 +0200
+
+    muutos ja lisäys
+
+commit e4e52f4e1a2ed56a26b17aa69feb47a95207d760
+Author: Ville-Veikko Mäntylä <villevem@helsinki.fi>
+Date:   Thu Mar 16 13:41:37 2023 +0200
+
+    tiedosto.txt luotu
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % q         
+zsh: command not found: q
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % touch kolmas.txt
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git add .
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   kolmas.txt
+
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git commit -m "lisää 
+kolmas"
+[main 99539c8] lisää kolmas
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 kolmas.txt
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % nano toinen.txt  
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % nano kolmas.txt
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   kolmas.txt
+	modified:   toinen.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git add .
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   kolmas.txt
+	modified:   toinen.txt
+
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git commit -m "modify 
+toinen and third"
+[main e7991cd] modify toinen and third
+ 2 files changed, 2 insertions(+)
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % mkdir stuff
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % ls
+kolmas.txt	stuff		tiedosto.txt	toinen.txt
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % touch stuff/jokin.txt
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % cd stuff     
+vilkkomantyla@Ville-Veikko-MacBook-Pro stuff % ls
+jokin.txt
+vilkkomantyla@Ville-Veikko-MacBook-Pro stuff % cd ..
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git add stuff 
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   stuff/jokin.txt
+
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git commit -m "lisää 
+stuff"
+[main 2948034] lisää stuff
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 stuff/jokin.txt
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git log
+commit 2948034abfcd1953816abf69c9fd4ec740494471 (HEAD -> main)
+Author: Ville-Veikko Mäntylä <villevem@helsinki.fi>
+Date:   Thu Mar 16 13:49:32 2023 +0200
+
+    lisää stuff
+
+commit e7991cd198a6422647d205c69f084d9e0641d5f9
+Author: Ville-Veikko Mäntylä <villevem@helsinki.fi>
+Date:   Thu Mar 16 13:48:06 2023 +0200
+
+    modify toinen and third
+
+commit 99539c81e22ce0fa36fb2dacf25ad0525f98bd2b
+Author: Ville-Veikko Mäntylä <villevem@helsinki.fi>
+Date:   Thu Mar 16 13:46:54 2023 +0200
+
+    lisää kolmas
+
+commit 3cd9596f65cb1d2b01e09ae3c9176ae47fcc6041
+Author: Ville-Veikko Mäntylä <villevem@helsinki.fi>
+Date:   Thu Mar 16 13:44:05 2023 +0200
+
+    muutos ja lisäys
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % rm toinen.txt 
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git status
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    toinen.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git rm
+fatal: No pathspec was given. Which files should I remove?
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git rm toinen.txt
+rm 'toinen.txt'
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % ls
+kolmas.txt	stuff		tiedosto.txt
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git commit -m "poista 
+toinen"
+[main fc49424] poista toinen
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 toinen.txt
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git status
+On branch main
+nothing to commit, working tree clean
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % mv tiedosto.txt 
+eka.txt
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % ls
+eka.txt		kolmas.txt	stuff
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git status
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    tiedosto.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	eka.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git commit -m "rename"
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    tiedosto.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	eka.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git add .
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	renamed:    tiedosto.txt -> eka.txt
+
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git commit -m "rename"
+[main e806e31] rename
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename tiedosto.txt => eka.txt (100%)
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % nano eka.txt 
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % nano kolmas.txt
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git add -p
+diff --git a/eka.txt b/eka.txt
+index 4051121..406e09c 100644
+--- a/eka.txt
++++ b/eka.txt
+@@ -1 +1 @@
+-moikkis
++moikkis jne.
+(1/1) Stage this hunk [y,n,q,a,d,e,?]? y
+
+diff --git a/kolmas.txt b/kolmas.txt
+index 88b0e2e..ee92c1b 100644
+--- a/kolmas.txt
++++ b/kolmas.txt
+@@ -1 +1 @@
+-jfdmkmkmkm
++kklkdkkldklkdlklk jfdmkmkmkm
+(1/1) Stage this hunk [y,n,q,a,d,e,?]? y
+
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git commit -m "change 
+eka and kolmas"
+[main 1f529d1] change eka and kolmas
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git status'
+quote> q
+quote> 
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % nano eka.txt 
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   eka.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git restore eka.txt 
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git status
+On branch main
+nothing to commit, working tree clean
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % nano eka.txt 
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git status
+On branch main
+nothing to commit, working tree clean
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % nano kolmas.txt 
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git add kolmas.txt 
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   kolmas.txt
+
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git restore --staged 
+kolmas.txt
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   kolmas.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git restore kolmas.txt 
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % mkdir tiedostoja
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % cd tiedostoja 
+vilkkomantyla@Ville-Veikko-MacBook-Pro tiedostoja % touch file{1..3}
+vilkkomantyla@Ville-Veikko-MacBook-Pro tiedostoja % ls
+file1	file2	file3
+vilkkomantyla@Ville-Veikko-MacBook-Pro tiedostoja % cd ..
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git add tiedostoja 
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   tiedostoja/file1
+	new file:   tiedostoja/file2
+	new file:   tiedostoja/file3
+
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git commit -m "lisää 
+tiedostoja ja filet"
+[main e3416a4] lisää tiedostoja ja filet
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 tiedostoja/file1
+ create mode 100644 tiedostoja/file2
+ create mode 100644 tiedostoja/file3
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % cd tiedostoja 
+vilkkomantyla@Ville-Veikko-MacBook-Pro tiedostoja % nano file1
+vilkkomantyla@Ville-Veikko-MacBook-Pro tiedostoja % rm file2
+vilkkomantyla@Ville-Veikko-MacBook-Pro tiedostoja % git status
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   file1
+	deleted:    file2
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vilkkomantyla@Ville-Veikko-MacBook-Pro tiedostoja % git restore ..
+vilkkomantyla@Ville-Veikko-MacBook-Pro tiedostoja % git status
+On branch main
+nothing to commit, working tree clean
+vilkkomantyla@Ville-Veikko-MacBook-Pro tiedostoja % nano file3
+vilkkomantyla@Ville-Veikko-MacBook-Pro tiedostoja % git add file3
+vilkkomantyla@Ville-Veikko-MacBook-Pro tiedostoja % git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   file3
+
+vilkkomantyla@Ville-Veikko-MacBook-Pro tiedostoja % git restore --staged 
+file3
+vilkkomantyla@Ville-Veikko-MacBook-Pro tiedostoja % git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   file3
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vilkkomantyla@Ville-Veikko-MacBook-Pro tiedostoja % git restore file3
+vilkkomantyla@Ville-Veikko-MacBook-Pro tiedostoja % git status
+On branch main
+nothing to commit, working tree clean
+vilkkomantyla@Ville-Veikko-MacBook-Pro tiedostoja % rm file1
+vilkkomantyla@Ville-Veikko-MacBook-Pro tiedostoja % ls
+file2	file3
+vilkkomantyla@Ville-Veikko-MacBook-Pro tiedostoja % mv file2 file22
+vilkkomantyla@Ville-Veikko-MacBook-Pro tiedostoja % ls
+file22	file3
+vilkkomantyla@Ville-Veikko-MacBook-Pro tiedostoja % git status
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    file1
+	deleted:    file2
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	file22
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vilkkomantyla@Ville-Veikko-MacBook-Pro tiedostoja % git add ..
+vilkkomantyla@Ville-Veikko-MacBook-Pro tiedostoja % git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	deleted:    file2
+	renamed:    file1 -> file22
+
+vilkkomantyla@Ville-Veikko-MacBook-Pro tiedostoja % git commit -m "poista 
+1 ja muuta 2:n nimi"
+[main 1c06623] poista 1 ja muuta 2:n nimi
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 tiedostoja/file2
+ rename tiedostoja/{file1 => file22} (100%)
+vilkkomantyla@Ville-Veikko-MacBook-Pro tiedostoja % cd ..
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % git log --stat | cat
+commit 1c06623a1d663bc003111be35fabcb80994405b6
+Author: Ville-Veikko Mäntylä <villevem@helsinki.fi>
+Date:   Thu Mar 16 14:08:45 2023 +0200
+
+    poista 1 ja muuta 2:n nimi
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit e3416a4333ccdeaccb6ccb8d3fd7dfaeea3e1aec
+Author: Ville-Veikko Mäntylä <villevem@helsinki.fi>
+Date:   Thu Mar 16 14:06:13 2023 +0200
+
+    lisää tiedostoja ja filet
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 1f529d1e7824fc1ea793bed890f22e2d42aae8a4
+Author: Ville-Veikko Mäntylä <villevem@helsinki.fi>
+Date:   Thu Mar 16 13:54:10 2023 +0200
+
+    change eka and kolmas
+
+ eka.txt    | 2 +-
+ kolmas.txt | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit e806e313aa6bdae3512b6cbfc3196f932bd44645
+Author: Ville-Veikko Mäntylä <villevem@helsinki.fi>
+Date:   Thu Mar 16 13:52:46 2023 +0200
+
+    rename
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit fc49424451b8647dc6f999037058fc884cb141fa
+Author: Ville-Veikko Mäntylä <villevem@helsinki.fi>
+Date:   Thu Mar 16 13:51:10 2023 +0200
+
+    poista toinen
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 2948034abfcd1953816abf69c9fd4ec740494471
+Author: Ville-Veikko Mäntylä <villevem@helsinki.fi>
+Date:   Thu Mar 16 13:49:32 2023 +0200
+
+    lisää stuff
+
+ stuff/jokin.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit e7991cd198a6422647d205c69f084d9e0641d5f9
+Author: Ville-Veikko Mäntylä <villevem@helsinki.fi>
+Date:   Thu Mar 16 13:48:06 2023 +0200
+
+    modify toinen and third
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 99539c81e22ce0fa36fb2dacf25ad0525f98bd2b
+Author: Ville-Veikko Mäntylä <villevem@helsinki.fi>
+Date:   Thu Mar 16 13:46:54 2023 +0200
+
+    lisää kolmas
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 3cd9596f65cb1d2b01e09ae3c9176ae47fcc6041
+Author: Ville-Veikko Mäntylä <villevem@helsinki.fi>
+Date:   Thu Mar 16 13:44:05 2023 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit e4e52f4e1a2ed56a26b17aa69feb47a95207d760
+Author: Ville-Veikko Mäntylä <villevem@helsinki.fi>
+Date:   Thu Mar 16 13:41:37 2023 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % touch 
+komennon_tulos.txt
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % nano 
+komennon_tulos.txt
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % cd ..
+vilkkomantyla@Ville-Veikko-MacBook-Pro ~ % mkdir ot-harjoitustyo
+vilkkomantyla@Ville-Veikko-MacBook-Pro ~ % cd ot-harjoitustyo 
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot-harjoitustyo % git init
+Initialized empty Git repository in 
+/Users/vilkkomantyla/ot-harjoitustyo/.git/
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot-harjoitustyo % touch README.md
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot-harjoitustyo % git add .
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot-harjoitustyo % git commit -m 
+"initial commit"
+[main (root-commit) 1465347] initial commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot-harjoitustyo % git remote add 
+origin git@github.com:vilkkomantyla/ot-harjoitustyo.git
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot-harjoitustyo % git remote -v
+origin	git@github.com:vilkkomantyla/ot-harjoitustyo.git (fetch)
+origin	git@github.com:vilkkomantyla/ot-harjoitustyo.git (push)
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot-harjoitustyo % git push
+Enter passphrase for key '/Users/vilkkomantyla/.ssh/id_rsa': 
+Enter passphrase for key '/Users/vilkkomantyla/.ssh/id_rsa': 
+Enter passphrase for key '/Users/vilkkomantyla/.ssh/id_rsa': 
+No refs in common and none specified; doing nothing.
+Perhaps you should specify a branch.
+Everything up-to-date
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot-harjoitustyo % --set-upstream 
+origin main
+zsh: command not found: --set-upstream
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot-harjoitustyo % git push 
+--set-upstream origin main
+Enter passphrase for key '/Users/vilkkomantyla/.ssh/id_rsa': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 229 bytes | 229.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:vilkkomantyla/ot-harjoitustyo.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot-harjoitustyo % mkdir laskarit
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot-harjoitustyo % mkdir viikko1
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot-harjoitustyo % cd viik               
+cd: no such file or directory: viik
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot-harjoitustyo % cd viikko1 
+vilkkomantyla@Ville-Veikko-MacBook-Pro viikko1 % touch komentorivi.txt
+vilkkomantyla@Ville-Veikko-MacBook-Pro viikko1 % nano komentorivi.txt 
+vilkkomantyla@Ville-Veikko-MacBook-Pro viikko1 % cd .. 
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot-harjoitustyo % cd ..
+vilkkomantyla@Ville-Veikko-MacBook-Pro ~ % ls
+Applications
+Desktop
+Documents
+Downloads
+Library
+Movies
+Music
+Pictures
+Public
+README.md
+Todistus koulutuksesta_ Tietosuojan ABC julkishallinnon henkilöstölle.rtfd
+bikes.db
+fuksikoodi.py
+gfsaj.db
+kuvat
+kuvia
+lapiogit
+muistiinpanot.txt.save
+newnlpgit
+nltk_data
+oikeus.txt
+ot-harjoitustyo
+ot_viikko1
+scripti.sh
+titokone.cfg
+uusyritys
+vilkkomantyla@Ville-Veikko-MacBook-Pro ~ % tree kurssit
+zsh: command not found: tree
+vilkkomantyla@Ville-Veikko-MacBook-Pro ~ % cd ..
+vilkkomantyla@Ville-Veikko-MacBook-Pro /Users % cd      
+vilkkomantyla@Ville-Veikko-MacBook-Pro ~ % ssh 
+villevem@melkki.cs.helsinki.fi
+villevem@melkki.cs.helsinki.fi's password: 
+Welcome to Cubbli/Ubuntu 20.04.5 LTS (GNU/Linux 5.15.0-48-generic x86_64)
+
+ * Ubuntu Documentation:  https://help.ubuntu.com
+ * Cubbli Linux:          
+https://wiki.helsinki.fi/display/it4sci/Cubbli+Linux
+ * Support:               helpdesk@helsinki.fi
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+98 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+*** System restart required ***
+ * This is melkki.cs.helsinki.fi.
+ * This is an interactive linux server for all University of Helsinki 
+users. 
+ * Please, do not run any CPU or memory intensive jobs here!
+ * Sometimes security reasons demand that melkki is rebooted on a short
+ * notice.
+
+ * All local writable directories will be cleaned of unused files.
+ * Do not save anything to local tmp directories.
+ * AD and CS home and group directories are safe places for files.
+
+ * 2022-08-27: Melkki was restarted to fix shared directories hanging.
+Last login: Thu Mar 16 13:21:19 2023 from 128.214.138.176
+ * Your home is set to AD lxhome: /home/ad/lxhome/v/villevem/Linux/
+ * Your Z-drive path is: /home/ad/home/v/villevem
+ * ~/Desktop/ , ~/Downloads/ and ~/Documents/ are symlinks to Z-drive.
+villevem@melkki:~$ cd kurssit/
+villevem@melkki:~/kurssit$ cd ..
+villevem@melkki:~$ tree kurssit/
+kurssit/
+└── ot2023
+    └── viikko1
+        └── unicafe
+            ├── poetry.lock
+            ├── pyproject.toml
+            └── src
+                ├── index.py
+                ├── kassapaate.py
+                ├── maksukortti.py
+                └── tests
+                    ├── __init__.py
+                    └── maksukortti_test.py
+
+5 directories, 7 files
+villevem@melkki:~$ exit
+logout
+Connection to melkki.cs.helsinki.fi closed.
+vilkkomantyla@Ville-Veikko-MacBook-Pro ~ % cd 
+Applications/
+Desktop/
+Documents/
+Downloads/
+Library/
+Movies/
+Music/
+Pictures/
+Public/
+README.md
+Todistus\ koulutuksesta_\ Tietosuojan\ ABC\ julkishallinnon\ 
+henkilöstölle.rtfd/
+bikes.db
+fuksikoodi.py
+gfsaj.db
+kuvat/
+kuvia/
+lapiogit/
+muistiinpanot.txt.save
+newnlpgit/
+nltk_data/
+oikeus.txt
+ot-harjoitustyo/
+ot_viikko1/
+scripti.sh*
+titokone.cfg
+uusyritys/
+vilkkomantyla@Ville-Veikko-MacBook-Pro ~ % cd ot-harjoitustyo 
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot-harjoitustyo % ls
+README.md	laskarit	viikko1
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot-harjoitustyo % touch 
+laskarit/viikko1/komentorivi.txt
+touch: laskarit/viikko1/komentorivi.txt: No such file or directory
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot-harjoitustyo % cd laskarit 
+vilkkomantyla@Ville-Veikko-MacBook-Pro laskarit % cd ..
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot-harjoitustyo % mv viikko1 
+laskarit/
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot-harjoitustyo % ls
+README.md	laskarit
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot-harjoitustyo % cd laskarit 
+vilkkomantyla@Ville-Veikko-MacBook-Pro laskarit % ls
+viikko1
+vilkkomantyla@Ville-Veikko-MacBook-Pro laskarit % touch 
+viikko1/komentorivi.txt
+vilkkomantyla@Ville-Veikko-MacBook-Pro laskarit % cd 
+viikko1/komentorivi.txt 
+cd: not a directory: viikko1/komentorivi.txt
+vilkkomantyla@Ville-Veikko-MacBook-Pro laskarit % cd viikko1 
+vilkkomantyla@Ville-Veikko-MacBook-Pro viikko1 % ls
+komentorivi.txt
+vilkkomantyla@Ville-Veikko-MacBook-Pro viikko1 % nano komentorivi.txt 
+vilkkomantyla@Ville-Veikko-MacBook-Pro viikko1 % cd ~
+vilkkomantyla@Ville-Veikko-MacBook-Pro ~ % ls
+Applications
+Desktop
+Documents
+Downloads
+Library
+Movies
+Music
+Pictures
+Public
+README.md
+Todistus koulutuksesta_ Tietosuojan ABC julkishallinnon henkilöstölle.rtfd
+bikes.db
+fuksikoodi.py
+gfsaj.db
+kuvat
+kuvia
+lapiogit
+muistiinpanot.txt.save
+newnlpgit
+nltk_data
+oikeus.txt
+ot-harjoitustyo
+ot_viikko1
+scripti.sh
+titokone.cfg
+uusyritys
+vilkkomantyla@Ville-Veikko-MacBook-Pro ~ % cd ot_viikko1      
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % ls
+eka.txt			komennon_tulos.txt	tiedostoja
+kolmas.txt		stuff
+vilkkomantyla@Ville-Veikko-MacBook-Pro ot_viikko1 % nano 
+komennon_tulos.txt 
+
+  UW PICO 5.09                    File: komennon_tulos.txt                      
+
+Author: Ville-Veikko Mäntylä <villevem@helsinki.fi>
+Date:   Thu Mar 16 13:51:10 2023 +0200
+
+    poista toinen
+    
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+ 
+commit 2948034abfcd1953816abf69c9fd4ec740494471
+Author: Ville-Veikko Mäntylä <villevem@helsinki.fi>
+Date:   Thu Mar 16 13:49:32 2023 +0200
+
+    lisää stuff
+    
+ stuff/jokin.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ 
+commit e7991cd198a6422647d205c69f084d9e0641d5f9
+Author: Ville-Veikko Mäntylä <villevem@helsinki.fi>
+
