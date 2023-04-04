@@ -1,7 +1,7 @@
-## otsikko
+## README-dokumentaatio
 
-fdsjaklömjkldösa
-__ jfdjkjfd __
-jklöfdjklö  jkfdkj fdsakk kfdk kd kfdkfdkk **jfdjklö**
-[Git historia](https://github.com/vilkkomantyla/ot-harjoitustyo/blob/main/laskarit/viikko1/gitlog.txt)
-[Puu](https://github.com/vilkkomantyla/ot-harjoitustyo/blob/main/laskarit/viikko1/komentorivi.txt)
+Vaativuusmäärittely:
+https://github.com/vilkkomantyla/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md
+
+Työaikakirjanpito:
+https://github.com/vilkkomantyla/ot-harjoitustyo/blob/main/dokumentaatio/tyoaikakirjanpito.md
